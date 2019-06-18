@@ -14,74 +14,74 @@ class Order
     /**
      * @ORM\Id()
      * @ORM\GeneratedValue()
-     * @ORM\Column(type="integer")
+     * @ORM\Column(type="integer", name="idFlux")
      */
     private $id;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=255, name="marketplace")
      */
     private $marketplace;
 
     /**
-     * @ORM\Column(type="string", length=19)
+     * @ORM\Column(type="string", length=19, name="order_id")
      */
-    private $order_id;
+    private $orderId;
 
     /**
-     * @ORM\Column(type="string", length=19)
-     */
-    private $order_mrid;
+    -     * @ORM\Column(type="string", length=19, name="order_mrid")
+    -     */
+    private $orderMrid;
 
     /**
-     * @ORM\Column(type="string", length=19)
+     * @ORM\Column(type="string", length=19, name="order_refid")
      */
-    private $order_refid;
+    private $orderRefid;
 
     /**
-     * @ORM\Column(type="string", length=255, nullable=true)
+     * @ORM\Column(type="string", length=255, nullable=true, name="order_external_id")
      */
-    private $order_external_id;
+    private $orderExternalId;
 
     /**
-     * @ORM\Column(type="string", length=10)
+     * @ORM\Column(type="string", length=10, name="order_purchase_date")
      */
-    private $order_purchase_date;
+    private $orderPurchaseDate;
 
     /**
-     * @ORM\Column(type="string", length=8)
+     * @ORM\Column(type="string", length=8, name="order_purchase_heure")
      */
-    private $order_purchase_heure;
+    private $orderPurchaseHeure;
 
     /**
-     * @ORM\Column(type="float")
+     * @ORM\Column(type="float", name="order_amount")
      */
-    private $order_amount;
+    private $orderAmount;
 
     /**
-     * @ORM\Column(type="integer")
+     * @ORM\Column(type="integer", name="order_tax")
      */
-    private $order_tax;
+    private $orderTax;
 
     /**
-     * @ORM\Column(type="float")
+     * @ORM\Column(type="float", name="order_shipping")
      */
-    private $order_shipping;
+    private $orderShipping;
 
     /**
-     * @ORM\Column(type="float")
+     * @ORM\Column(type="float", name="order_commission")
      */
-    private $order_commission;
+    private $orderCommission;
 
     /**
-     * @ORM\Column(type="integer")
+     * @ORM\Column(type="integer", name="order_processing_fee")
      */
-    private $order_processing_fee;
+    private $orderProcessingFee;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=255, name="order_currency_currency")
      */
-    private $order_currency;
+    private $orderCurrency;
 
     public function getId(): ?int
     {
@@ -102,12 +102,12 @@ class Order
 
     public function getOrderId(): ?int
     {
-        return $this->order_id;
+        return $this->orderId;
     }
 
-    public function setOrderId(int $order_id): self
+    public function setOrderId(int $orderId): self
     {
-        $this->order_id = $order_id;
+        $this->orderId = $orderId;
 
         return $this;
     }
@@ -138,12 +138,12 @@ class Order
 
     public function getOrderExternalId(): ?int
     {
-        return $this->order_external_id;
+        return $this->orderExternalId;
     }
 
-    public function setOrderExternalId(?int $order_external_id): self
+    public function setOrderExternalId(?int $orderExternalId): self
     {
-        $this->order_external_id = $order_external_id;
+        $this->orderExternalId = $orderExternalId;
 
         return $this;
     }
